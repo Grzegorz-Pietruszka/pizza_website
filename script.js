@@ -18,7 +18,6 @@ $('.remove').on('click', function() {
         }
 });
 
-
 // counter of pizza orders
 var pizza_amount = 0;
 $('.order-bar button').click(function() {
@@ -39,16 +38,13 @@ $(window).on('scroll touchmove', function(e){
        $('.mobile-menu').removeClass('mobile-menu-scroll'); 
        $('.trolley img').attr('src', 'img/trolley-white.svg');
        $('.logo-mobile').removeClass('logo-click');
-    }
-    });
+    }});
 
-  
 //Click menu icon
 $('.menu-hamburger').click(function() {
     
     $('.menu-toggle-phone').toggleClass('menu-toggle-phone-active');
     $('.menu-list').toggleClass('menu-list-active');
-    
     
     var src = $('img', this).attr('src');
     if(src === 'img/pizza.svg') {
@@ -75,16 +71,12 @@ $('.menu-hamburger').click(function() {
         $('.mobile-menu-scroll').toggleClass('mms-click');
         $('.logo-mobile').toggleClass('logo-click');
         $('.trolley img').attr('src', trolleySrc);
-    }
-    
-
-});
+    }});
 
   // paragraphs in menu
 $('.menu-list').children().click(function() {
     $(this).closest('.text-par').find('.menu-text').toggleClass('menu-text-vis');
 });
-
 
   //desktop menu 
 function desktop() {
@@ -109,8 +101,6 @@ desktop();
 $(window).resize(desktop);
 
 //Logo pizza eye move  
-
-
   $($('.main')).on('mousemove', function(e) {
       var X = e.pageX;
       var Y = e.pageY;
@@ -129,10 +119,7 @@ $(window).resize(desktop);
         $('.eye').css('top', 90)
       }
   });
-  
-  
-   function vegAnimate() {
-     
+   function vegAnimate() {  
      $('.gr1').animate({
       top: '+=10px',
       left: '+=8px'
@@ -140,10 +127,8 @@ $(window).resize(desktop);
       $(this).animate({
         top: '-=10px',
         left: '-=8px'
-
       },1700)
-    });
-     
+     });   
      $('.gr2').animate({
       top: '-=10px',
       right: '+=4px'
@@ -151,7 +136,6 @@ $(window).resize(desktop);
       $(this).animate({
         top: '+=10px',
         right: '-=4px'
-
       },1500)
     });
      
@@ -162,41 +146,10 @@ $(window).resize(desktop);
       $(this).animate({
         top: '-=12px',
         left: '-=2px'
-
       },1200)
     });
-    
-    
-     
    }
     
   vegAnimate();
   setInterval(vegAnimate, 3401); 
- 
-
-
-
 });
-
-
-
-
-
-  
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
